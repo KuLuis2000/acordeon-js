@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Acordeon con Javascript</title>
+    <link rel="stylesheet" href="estilo.css" />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/d188054eba.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <section class="ancho">
+      <article class="acordeon">
+        <h1>Frequently Asked Questions</h1>
+
+        <div class="ancho acordeon">
+          <div class="acordeon_titulo">
+            <div class="more">
+                <i class="fa-solid fa-square-plus"></i>
+            </div>
+            <h2 id="flecha_azul">Do you provide any scripts with your templates?</h2>
+          </div>
+
+          <article class="acordeon_contenido">
+            <p>
+              Our templates do not include any additional scripts. Newsletter
+              subscriptions, search fields, forums, image galleries (in HTML
+              versions of Flash products) are inactive. Basic scripts can be
+              easily added at www.zemez.io If you are not sure that the element
+              you’re interested in is active please contact our Support Chat for
+              clarification.
+            </p>
+          </article>
+        </div>
+
+        <div class="ancho acordeon">
+          <div class="acordeon_titulo">
+            <div class="more">
+                <i class="fa-solid fa-square-plus"></i>
+            </div>
+            <h2 id="flecha_azul2">What do I receive when I order a template?</h2>
+          </div>
+          <article class="acordeon_contenido">
+            <p>
+              After you complete the payment via our secure form you will
+              receive the instructions for downloading the product. The source
+              files in the download package can vary based on the type of the
+              product you have purchased.
+            </p>
+          </article>
+        </div>
+
+        <div class="ancho acordeon">
+          <div class="acordeon_titulo">
+            <div class="more">
+                <i class="fa-solid fa-square-plus"></i>
+            </div>
+            <h2 id="flecha_azul3">In what formats are your templates available?</h2>
+          </div>
+          <article class="acordeon_contenido">
+            <p>
+              Website templates are available in Photoshop and HTML formats.
+              Fonts are included with the Photoshop file. In most templates,
+              HTML is compatible with Adobe® Dreamweaver® and Microsoft®
+              FrontPage®.
+            </p>
+          </article>
+        </div>
+
+        <div class="ancho acordeon">
+          <div class="acordeon_titulo">
+            <div class="more">
+                <i class="fa-solid fa-square-plus"></i>
+            </div>
+            <h2 id="flecha_azul4">What am I allowed to do with the templates?</h2>
+          </div>
+          <article class="acordeon_contenido">
+            <p>
+              You may build a website using the template in any way you like.
+              You may not resell or redistribute templates (like we do); claim
+              intellectual or exclusive ownership to any of our products,
+              modified or unmodified. All products are property of content
+              providing companies and individuals.
+            </p>
+          </article>
+        </div>
+      </article>
+
+      <article class="skills">
+        <h1>Skills</h1>
+        <div class="contenedor">
+            <h3>Branding</h3>
+            <h3>90%</h3>
+        </div>
+        <hr class="branding">
+        <div class="contenedor">
+            <h3>Web Design</h3>
+            <h3>65%</h3>
+        </div>
+        <hr class="web">
+        
+        <div class="contenedor">
+            <h3>Copywriting</h3>
+            <h3>100%</h3>
+        </div>
+        <hr class="copywriting">
+        <div class="contenedor">
+            <h3>Video Production</h3>
+            <h3>75%</h3>
+        </div>
+        <hr class="video">
+      </article>
+    </section>
+
+    <script>
+      $(".acordeon_titulo").click(function (){
+    var t = $(this);
+    var tp = t.next();
+    // Cambiar el icono
+    var icon = t.find("i");
+    if (icon.hasClass("fa-square-plus")) {
+        icon.removeClass("fa-square-plus").addClass("fa-square-minus");
+        t.css("color", "blue"); // Cambiar el color del texto a azul
+    } else {
+        icon.removeClass("fa-square-minus").addClass("fa-square-plus");
+        t.css("color", ""); // Restablecer el color del texto
+    }
+    tp.slideToggle();
+});
+    </script>
+  </body>
+</html>

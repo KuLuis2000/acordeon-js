@@ -1,0 +1,215 @@
+* {
+  box-sizing: border-box;
+  margin: 0%;
+  padding: 0%;
+}
+
+body {
+  font-family: helvetica;
+  font-size: 16px;
+  line-height: 24px;
+  color: #333;
+}
+
+.ancho {
+  max-width: 1200px;
+  margin: auto;
+  margin-top: 30px;
+}
+
+section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: #ffffff;
+}
+
+.acordeon {
+  width: 500px;
+}
+
+.acordeon h1 {
+  font-size: 32px;
+  margin-top: 20px;
+}
+
+.acordeon h2 {
+  font-size: 23px;
+}
+
+.acordeon p {
+  font-size: 20px;
+  line-height: 28px;
+  color: #c4c4c4;
+  margin-left: 45px;
+  font-weight: lighter;
+}
+
+.skills {
+  width: 500px;
+}
+
+/* CSS acordeon */
+
+.listado {
+  margin-left: 50px;
+  margin-top: 20px;
+}
+
+.acordeon_titulo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  cursor: pointer;
+  padding: 10px;
+  margin-top: 30px;
+}
+
+.acordeon_titulo h2 {
+  font-size: 20px;
+  line-height: 28px;
+  width: 88%;
+  font-weight: lighter;
+  font-size: 21px;
+}
+
+.acordeon_contenido {
+  padding: 15px;
+  display: none;
+}
+
+.more {
+  font-size: 25px;
+}
+
+.more i {
+  color: blue;
+}
+
+.azul {
+  color: black;
+  transition: all 0.5s;
+}
+
+.azul {
+  color: blue;
+}
+
+/* Fin de CSS acordeon */
+
+.contenedor {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 47px;
+}
+
+.contenedor h3 {
+  font-weight: lighter;
+  font-size: 21px;
+  line-height: 29px;
+  color: #404040;
+}
+
+.skills h1 {
+  font-size: 32px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.branding {
+  margin-top: 10px;
+  margin-bottom: 5px;
+  border: none;
+  background-color: #2937ef;
+  height: 3px;
+  width: 90%;
+}
+
+.web {
+  margin-top: 10px;
+  margin-bottom: 5px;
+  border: none;
+  background-color: #e5c61a;
+  height: 3px;
+  width: 65%;
+}
+
+.copywriting {
+  margin-top: 10px;
+  margin-bottom: 5px;
+  border: none;
+  background-color: #ed4882;
+  height: 3px;
+  width: 100%;
+}
+
+.video {
+  margin-top: 10px;
+  margin-bottom: 5px;
+  border: none;
+  background-color: #2fc986;
+  height: 3px;
+  width: 75%;
+}
+
+/* css ipad */
+
+@media screen and (max-width: 768px) {
+  section {
+    flex-direction: column;
+    width: 90%;
+  }
+
+  .acordeon {
+    width: 100%;
+  }
+
+  .acordeon p {
+    margin-left: 60px;
+  }
+
+  .skills {
+    width: 100%;
+    margin-top: 40px;
+    margin-bottom: 35px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  section {
+    width: 90%;
+  }
+
+  .acordeon {
+    width: 100%;
+  }
+
+  .acordeon h1 {
+
+    font-size: 23px;
+    margin-top: 20px;
+  }
+
+  .acordeon h2 {
+    font-size: 20px;
+    color: #404040;
+  }
+
+  .acordeon p {
+    font-size: 20px;
+    line-height: 28px;
+    color: #c4c4c4;
+    margin-left: 45px;
+    font-weight: lighter;
+  }
+
+  .acordeon_titulo{
+    gap: 23px;
+  }
+
+  .skills h1{
+    font-size: 23px;
+  }
+}
